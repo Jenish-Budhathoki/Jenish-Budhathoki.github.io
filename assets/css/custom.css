@@ -3,7 +3,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 1rem;
+	gap: 1.75rem;
+	font-size: 1.1rem;
+	margin-bottom: 0.75rem;
 }
 
 /* Work experience section */
@@ -60,6 +62,11 @@
 .center-text {
 	text-align: center;
 	margin-bottom: 2rem;
+}
+
+.intro-resume {
+	font-size: 1.1rem;
+	padding: 0 2.4rem;
 }
 
 .project-description {

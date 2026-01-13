@@ -11,97 +11,10 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/custom.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
-	<style>
-		/* Custom styles for the first project */
-		.social-links-container {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			gap: 1rem;
-		}
-
-		/* Styles for work experience section */
-		/* CSS for Work Experience Section */
-		.work-experience .job-title {
-			font-size: 1.8em;
-			/* Bigger font for job title */
-			font-weight: bold;
-			color: #3c3939;
-		}
-
-		.work-experience .company-name {
-			font-size: 0.7em;
-			/* Smaller font for company name */
-			font-weight: normal;
-			color: #7b7676;
-		}
-
-		.work-experience .job-description {
-			font-size: 0.3em;
-			/* Smaller font for job description */
-			list-style-type: disc;
-			padding-left: 20px;
-			color: #7b7676;
-			margin-bottom: 10px;
-		}
-
-
-		.job-container {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-
-		.job-info {
-			flex-grow: 1;
-		}
-
-		.logo-container {
-			flex-shrink: 0;
-		}
-
-		.company-logo {
-			max-width: 130px;
-			/* Default size for other logos */
-			height: auto;
-			max-height: 100px;
-		}
-
-		.college-container {
-			display: flex;
-			justify-content: space-between;
-			gap: 2rem;
-		}
-
-		.college-logo {
-			max-width: 60px;
-			/* Default size for other logos */
-			height: auto;
-		}
-
-		.origin-logo {
-			max-width: 180px;
-			/* Adjusted size for Origin Investments logo */
-			height: auto;
-		}
-
-		.center-text {
-			text-align: center;
-			margin-bottom: 2rem;
-			/* Adjust margin as needed */
-		}
-
-		.project-description {
-			font-size: 20px;
-			/* Adjust size as needed */
-			line-height: 2;
-			/* Adjust line height as needed */
-			/* Additional styles if necessary */
-		}
-	</style>
 </head>
 
 <body class="is-preload">
@@ -111,14 +24,16 @@
 
 		<!-- Intro -->
 		<div id="intro">
-			<h1 style="font-size: 50px;">JASNA BUDHATHOKI</h1>
-			<p>Software Engineer | Data Scientist <br /> Passionate about using data and technology to solve real world
-				problems <br />
-			<div class="social-links-container"><a href="https://www.linkedin.com/in/jasna-budhathoki/">@LinkedIn</a> | <a
-					href="https://github.com/Jasna-Budhathoki"> @GitHub</a>
-				</p>
-				<button class="resume-btn">Resume</button>
-			</div><br />
+			<h1 style="font-size: 70px;">JASNA BUDHATHOKI</h1>
+			<p>Software Engineer | Machine Learning Engineer <br /> Passionate about using data and technology to solve real
+				world problems</p>
+			<div class="social-links-container">
+				<a href="https://www.linkedin.com/in/jasna-budhathoki/">@LinkedIn</a> | <a
+					href="https://github.com/Jasna-Budhathoki">@GitHub</a>
+			</div>
+			<a class="button intro-resume" href="resume/jasna-budhathoki_resume.pdf" target="_blank"
+				rel="noopener">Resume</a>
+			<br />
 			<img src="images/profile.jpeg" alt="Profile"
 				style="width:290px; height:290px; border-radius:50%;margin-bottom: 2rem;object-fit: cover;">
 			<ul class="actions">
@@ -136,17 +51,16 @@
 			<ul class="links">
 				<li><a href="#education">Education</a></li>
 				<li><a href="#skills">Skills</a></li>
-				<li><a href="#work-experience">Work Experience</a></li>
-				<li><a href="#projects">Projects</a></li>
+				<li><a href="work-experience.html">Work Experience</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="blogs.html">Blogs</a></li>
 			</ul>
 			<ul class="icons">
 				<li><a href="https://www.linkedin.com/in/jasna-budhathoki/" class="icon brands alt fa-linkedin"><span
-							class="label">linkedin</span></a></li>
+						class="label">linkedin</span></a></li>
 				<li><a href="https://github.com/Jasna-Budhathoki" class="icon brands alt fa-github"><span
-							class="label">GitHub</span></a></li>
-
+						class="label">GitHub</span></a></li>
 			</ul>
-
 		</nav>
 
 		<!-- Main -->
@@ -154,296 +68,85 @@
 			<header class="major">
 				<h2>Education</h2>
 			</header>
-			<section id="education" class="posts">
-				<article class="degree">
-					<header>
-						<span class="date">Dec 2025</span>
-						<div class="college-container">
-							<div class="college-info">
-								<h2>Columbia University</h2>
-								<p>M.S. in Computer Science, Machine Learning Track</p>
-							</div>
-							<div class="logo-container">
-								<img src="https://logos-download.com/wp-content/uploads/2020/06/Columbia_University_Logo.png"
-									alt="Columbia University Logo" class="college-logo">
-							</div>
+			<section id="education" class="section-grid">
+				<article class="card">
+					<div class="edu-header">
+						<div class="edu-details">
+							<div class="meta">Dec 2025</div>
+							<h3>Columbia University</h3>
+							<p>M.S. in Computer Science, Machine Learning Track</p>
 						</div>
-					</header>
+						<img src="https://logos-download.com/wp-content/uploads/2020/06/Columbia_University_Logo.png"
+							alt="Columbia University Logo" class="college-logo">
+					</div>
 				</article>
-				<article class="degree">
-					<header>
-						<span class="date">May 2023</span>
-						<div class="college-container">
-							<div class="college-info">
-								<h2>Mount Holyoke College</h2>
-								<p>B.S. in Computer Science, Minor in Statistics and Nexus in Data Science</p>
-							</div>
-							<div class="logo-container">
-								<img
-									src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Mount_Holyoke_College_seal.svg/1200px-Mount_Holyoke_College_seal.svg.png"
-									alt="Mount Holyoke College Logo" class="college-logo">
-							</div>
+				<article class="card">
+					<div class="edu-header">
+						<div class="edu-details">
+							<div class="meta">May 2023</div>
+							<h3>Mount Holyoke College</h3>
+							<p>B.A. in Computer Science, Minor in Statistics and Nexus in Data Science</p>
 						</div>
-					</header>
+						<img
+							src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Mount_Holyoke_College_seal.svg/1200px-Mount_Holyoke_College_seal.svg.png"
+							alt="Mount Holyoke College Logo" class="college-logo">
+					</div>
 				</article>
 			</section>
-			<!-- Skills -->
+
 			<header class="major">
 				<h2>Skills</h2>
 			</header>
-			<section id="skills" class="posts">
-				<div class="skill-category">
-					<h3>Languages</h3>
-					<div class="skill-box">Python</div>
-					<div class="skill-box">Java</div>
-					<div class="skill-box">R</div>
-					<div class="skill-box">Matlab</div>
-					<div class="skill-box">SQL</div>
-					<div class="skill-box">HTML</div>
-					<div class="skill-box">C</div>
+			<section id="skills" class="section-grid">
+				<div class="card">
+					<h3 class="skill-title">Languages</h3>
+					<div class="skill-list">
+						<span class="skill-pill">Python</span>
+						<span class="skill-pill">Java</span>
+						<span class="skill-pill">R</span>
+						<span class="skill-pill">Matlab</span>
+						<span class="skill-pill">SQL</span>
+						<span class="skill-pill">HTML</span>
+						<span class="skill-pill">C</span>
+					</div>
 				</div>
-				<div class="skill-category">
-					<h3>Frameworks/Libraries</h3>
-					<div class="skill-box">PyTorch</div>
-					<div class="skill-box">TensorFlow</div>
-					<div class="skill-box">Sklearn</div>
-					<div class="skill-box">CatBoost</div>
-					<div class="skill-box">Flask</div>
-					<div class="skill-box">RAG</div>
-					<div class="skill-box">SQLAlchemy</div>
-					<div class="skill-box">Pandas</div>
-					<div class="skill-box">NumPy</div>
+				<div class="card">
+					<h3 class="skill-title">Frameworks/<br />Libraries</h3>
+					<div class="skill-list">
+						<span class="skill-pill">PyTorch</span>
+						<span class="skill-pill">TensorFlow</span>
+						<span class="skill-pill">Sklearn</span>
+						<span class="skill-pill">CatBoost</span>
+						<span class="skill-pill">Flask</span>
+						<span class="skill-pill">RAG</span>
+						<span class="skill-pill">Pandas</span>
+						<span class="skill-pill">NumPy</span>
+						<span class="skill-pill">LangChain</span>
+					</div>
 				</div>
-				<div class="skill-category">
-					<h3>Development Platforms/Cloud Services</h3>
-					<div class="skill-box">PostgreSQL</div>
-					<div class="skill-box">GitHub</div>
-					<div class="skill-box">VS Code</div>
-					<div class="skill-box">Google Colab</div>
-					<div class="skill-box">Google Cloud</div>
-					<div class="skill-box">AWS</div>
+				<div class="card">
+					<h3 class="skill-title">Development Platforms/Cloud Services</h3>
+					<div class="skill-list">
+						<span class="skill-pill">Linux</span>
+						<span class="skill-pill">Mobile Development</span>
+						<span class="skill-pill">REST APIs</span>
+						<span class="skill-pill">Git</span>
+						<span class="skill-pill">GCP</span>
+						<span class="skill-pill">AWS</span>
+						<span class="skill-pill">Docker</span>
+					</div>
 				</div>
-				<div class="skill-category">
-					<h3>Mathematical Skills</h3>
-					<div class="skill-box">Linear Algebra</div>
-					<div class="skill-box">Statistics</div>
-					<div class="skill-box">Calculus</div>
-					<div class="skill-box">Applied Regressions</div>
-					<div class="skill-box">Discrete Mathematics</div>
-				</div>
-			</section>
-			<!-- Work Experience -->
-			<section id="work-experience" class="work-experience">
-				<div class="inner">
-					<header class="major">
-						<h2>Work Experience</h2>
-					</header>
-					<div class="posts">
-						<article class="post">
-							<header>
-								<span class="date">Feb 2023 - Aug 2024</span>
-								<div class="job-container">
-									<div class="job-info">
-										<h2 class="job-title">Software Engineer Intern<br />
-											<span class="company-name">Origin Investments</span>
-										</h2>
-									</div>
-									<div class="logo-container">
-										<img
-											src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg5YhyjmxmgzzpzVDg_MvCVjtah_37ZFuKmw&s"
-											alt="Origin Investments Logo" class="company-logo">
-									</div>
-								</div>
-							</header>
-							<ul>
-								<li>Achieved 98.33% accuracy in forecasting year-over-year Consumer Price Index (CPI) direction by
-									implementing ensemble regression and time series models.</li>
-								<li>Leveraged CatBoost to predict loan default probabilities, achieving a Recall of 0.96 and F1 Score of
-									0.98.</li>
-								<li>Designed CPI conformal prediction intervals to enhance accuracy and responsiveness to economic
-									fluctuations.</li>
-								<li>Trained a deep learning model to forecast rent, occupancy, and concessions using 3D spatio-temporal
-									data.</li>
-								<li>Developed a Retrieval Augmented Generation (RAG) app by employing LangChain and GPT-4 to address
-									investor queries.</li>
-								<li>Built a chatbot by fine-tuning GPT-3.5 Turbo and Llama 2 models with 900+ prompt-completion pairs.
-								</li>
-								<li>Produced and optimized a front-end Flask application integrating OpenStreetMap and Google Maps APIs
-									for interactive visualization of luxury apartments based on user-input addresses.</li>
-							</ul>
-						</article>
-						<article class="post">
-							<header>
-								<span class="date">Apr 2024 - Jul 2024 </span>
-								<div class="job-container">
-									<div class="job-info">
-										<h2 class="job-title">Data Science Consultant<br />
-											<span class="company-name">Xuno</span>
-										</h2>
-									</div>
-									<div class="logo-container">
-										<img src="https://nepal.xuno.co/static/vpmIyPLj2rpybl3IOoPwy2kfwNg0uXYYELa8zbecsqG.svg"
-											alt="Xuno Logo" class="company-logo">
-									</div>
-								</div>
-							</header>
-							<ul>
-								<li>Engineered a scalable data lake ETL pipeline for data ingestion, processing, analysis, and
-									visualization to analyze customer conversion rates (AWS).</li>
-								<li>Mentored a data intern, providing guidance in data querying (AWS Athena) and visualizations (Amazon
-									QuickSight).</li>
-							</ul>
-						</article>
-						<article class="post">
-							<header>
-								<span class="date">Jun 2023 - Oct 2023</span>
-								<div class="job-container">
-									<div class="job-info">
-										<h2 class="job-title">
-											Product Manager Apprentice<br />
-											<span class="company-name">Omdena</span>
-										</h2>
-									</div>
-									<div class="logo-container">
-										<img src="https://www.omdena.com/images/omdena.png" alt="Omdena Logo" class="origin-logo">
-									</div>
-								</div>
-							</header>
-							<ul>
-								<li>Constructed an AI-assisted scoring model in collaboration with 60 ML/AI engineers to determine
-									representation of women, youth, and marginalized groups in news media (NER and sentiment analysis).
-								</li>
-								<li>Collaborated with 12 domain experts to streamline end-to-end data pipeline and ML models, and
-									fine-tune LLMs.</li>
-								<li>Co-planned project outlining various stages, milestones, and tasks.</li>
-							</ul>
-						</article>
-						<article class="post">
-							<header>
-								<span class="date">June 2022 - August 2022</span>
-								<div class="job-container">
-									<div class="job-info">
-										<h2 class="job-title">Software Engineer Intern<br />
-											<span class="company-name">Kathmandu Living Labs</span>
-										</h2>
-									</div>
-									<div class="logo-container">
-										<img src="images/kll_logo.png" alt="Kathmandu Living Labs Logo" class="company-logo">
-									</div>
-								</div>
-							</header>
-							<ul>
-								<li>Improved a text to speech ML model (TensorFlow) to synthesize a natural sounding Nepali speech for a
-									cloud based geospatial service called Baato.</li>
-								<li>Created an R client library enabling easy consumption of Baato API into existing R projects.</li>
-								<li>Configured Flask REST APIs for geolocation services, including encoding and decoding
-									latitude-longitude pairs to enhance navigation and ride-sharing application functionality.</li>
-								<li>Setup CI/CD pipelines and deployed APIs on Heroku cloud application platform.</li>
-							</ul>
-						</article>
+				<div class="card">
+					<h3 class="skill-title">ML Skills</h3>
+					<div class="skill-list">
+						<span class="skill-pill">Computer Vision</span>
+						<span class="skill-pill">Deep Learning</span>
+						<span class="skill-pill">Reinforcement Learning</span>
+						<span class="skill-pill">Transformers</span>
+						<span class="skill-pill">Data Wrangling</span>
 					</div>
 				</div>
 			</section>
-
-			<br />
-
-			<br />
-
-
-
-
-			<style>
-				.skill-category {
-					margin-bottom: 20px;
-				}
-
-				.skill-box {
-					display: inline-block;
-					padding: 10px;
-					margin: 5px;
-					border: 1px solid #ccc;
-					border-radius: 5px;
-					background-color: #f9f9f9;
-				}
-			</style>
-			</section>
-
-			<!-- New header "Projects" added here -->
-			<header class="major">
-				<h2>Projects</h2>
-			</header>
-
-			<!-- Projects -->
-			<section id="projects" class="posts">
-				<article class="project">
-					<header class="major">
-						<a href="https://github.com/Jasna-Budhathoki/geohash" class="image fit"><img src="images/Geohash-grid.png"
-								alt="" /></a>
-						<h2><a href="https://github.com/Jasna-Budhathoki/geohash">Geohash Encoder and Decoder<br /></a></h2>
-						<p class="project-description">This projects contains a geohash encoder and a geohash decoder. Geohash
-							Encoder coverts a tuple of latitude and longitude to its corresponding geohash. This program converts a
-							given latitude and longitude to an 8 characters long geohash, which has an error rate of ±19 meters. A
-							geohash decoder converts a geohash into its corresponding tuple of latitude and longitude.</p>
-					</header>
-					<ul class="actions special">
-						<li><a href="https://github.com/Jasna-Budhathoki/geohash" class="button">View Project</a></li>
-					</ul>
-				</article>
-
-				<article class="project">
-					<header class="major">
-						<a href="https://github.com/Jasna-Budhathoki/chatgpt_tweets-analysis" class="image fit"><img
-								src="images/ChatGPT.jpeg" alt="" /></a>
-						<h2><a href="https://github.com/Jasna-Budhathoki/chatgpt_tweets-analysis">Sentiment Analysis on ChatGPT
-								Tweets<br />
-							</a></h2>
-						<p class="project-description">ChatGPT is a popular and fast growing artificial intelligence program that
-							has the ability to to assist and converse with humans in natural language. With the growing number of
-							users, there have been different responses to the AI, with some praising ChatGPT highly while others have
-							raised criticism and concerns. The goal of this project is to use sentiment analysis to classify ChatGPT
-							tweets as Positive, Negative, or Neutral from the timeframe November 2022 (when the software first
-							launched) to January 2023. </p>
-					</header>
-					<ul class="actions special">
-						<li><a href="https://github.com/Jasna-Budhathoki/chatgpt_tweets-analysis" class="button">View Project</a>
-						</li>
-					</ul>
-				</article>
-
-				<article class="project">
-					<header class="major">
-						<a href="https://github.com/Jasna-Budhathoki/GuessingGame" class="image fit"><img
-								src="images/guessing_game.jpeg" alt="" /></a>
-						<h2><a href="https://github.com/Jasna-Budhathoki/GuessingGame">Guessing Game<br />
-							</a></h2>
-						<p class="project-description">In the classic Twenty Questions game, one person thinks of
-							something--anything--and other people try to guess the thing by asking yes or no questions to narrow down
-							what sort of thing it is. If they guess it in fewer than 20 questions, they win. In this project, a person
-							plays the 20 Questions game with the computer. In this version of the game, the human thinks of something
-							and the computer will try to guess it.
-						</p>
-					</header>
-					<ul class="actions special">
-						<li><a href="https://github.com/Jasna-Budhathoki/GuessingGame" class="button">View Project</a></li>
-					</ul>
-				</article>
-
-				<article class="project">
-					<header class="major">
-						<a href="https://github.com/Jasna-Budhathoki/RClient" class="image fit"><img src="images/baato.jpeg"
-								alt="" /></a>
-						<h2><a href="https://github.com/Jasna-Budhathoki/RClient">Baato R Client<br />
-							</a></h2>
-						<p class="project-description">Baato is a cloud based geospatial services for developers and businesses in
-							Nepal. Baato R library makes it easy to integrate Baato API into existing projects.</p>
-					</header>
-					<ul class="actions special">
-						<li><a href="https://github.com/Jasna-Budhathoki/RClient" class="button">View Project</a></li>
-					</ul>
-				</article>
-			</section>
-
-			<!-- Footer -->
 
 			<!-- Copyright -->
 			<div id="copyright">
