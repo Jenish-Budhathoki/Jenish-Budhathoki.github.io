@@ -5,7 +5,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-
 <head>
 	<title>Blogs | Jenish Budhathoki</title>
 	<meta charset="utf-8" />
@@ -16,17 +15,13 @@
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 </head>
-
 <body class="is-preload">
-
 	<!-- Wrapper -->
 	<div id="wrapper" class="fade-in">
-
 		<!-- Header -->
 		<header id="header">
 			<a href="index.html" class="logo">Jenish Budhathoki</a>
 		</header>
-
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
@@ -44,24 +39,62 @@
 							class="label">GitHub</span></a></li>
 			</ul>
 		</nav>
-
 		<!-- Main -->
 		<div id="main">
 			<header class="major">
 				<h2>Blogs</h2>
 			</header>
-
 			<section class="posts">
 				<article class="post">
 					<header>
-						<h2>Writing</h2>
-						<p>Updates and essays will be added here. For now, reach out via email for recent writing samples.</p>
+						<span class="date">March 2025</span>
+						<h2>Challenges to the Use of Satellite Imagery in Mapping Poultry Farms in Nepal</h2>
 					</header>
+
+					<p>
+						Earlier this year, I worked on a project to detect and map large commercial poultry farms across Nepal using satellite imagery — part of a supply chain intelligence effort for an agri-supply company. The goal was straightforward on paper: use aerial and satellite data to identify poultry farm structures so the company could better understand where demand was concentrated. In practice, it turned out to be one of the more humbling technical challenges I have encountered. Here is what I ran into.
+					</p>
+
+					<h3>1. Cloud Cover and Imagery Availability</h3>
+					<p>
+						Nepal's geography makes consistent satellite coverage difficult. The monsoon season — which runs roughly from June through September — blankets large parts of the country in cloud cover for months at a time. When you are trying to pull cloud-free, high-resolution imagery from Google Earth Engine or Mapbox across an entire country, you quickly discover that many regions simply do not have usable recent imagery. You end up stitching together images from different dates, which introduces inconsistencies in lighting, vegetation state, and even building presence. For a classification model, this is a serious problem.
+					</p>
+
+					<h3>2. Resolution vs. Coverage Trade-off</h3>
+					<p>
+						High-resolution imagery (sub-meter) is available for parts of Nepal, but rarely with the coverage needed for a nationwide sweep. Freely available sources like Sentinel-2 offer broad coverage but at 10-meter resolution — coarse enough that a mid-sized poultry shed can appear as just a few pixels. The farms I was trying to detect ranged from modest operations to large commercial facilities, and distinguishing them from other agricultural structures at lower resolutions was genuinely difficult. Getting good imagery meant either paying for commercial data or carefully mosaicking whatever free sources were available.
+					</p>
+
+					<h3>3. Visual Similarity to Other Structures</h3>
+					<p>
+						From above, a commercial poultry barn looks a lot like a grain storage shed, a greenhouse, or a warehouse. The long rectangular rooftops, often made of corrugated metal, are not unique to poultry farming. I used geometry-based filtering — targeting structures above a certain length-to-width ratio and footprint size — to narrow the candidate pool before passing patches to a VGG16 classifier. But even then, the false positive rate from visually similar non-farm structures was something I had to manage carefully throughout the pipeline.
+					</p>
+
+					<h3>4. Lack of Labeled Ground Truth Data</h3>
+					<p>
+						This was perhaps the biggest constraint. Training a supervised model requires labeled examples — images tagged as "poultry farm" or "not poultry farm." For Nepal specifically, no such public dataset exists. I had to build a training set manually, cross-referencing known farm locations from business registries, Google Maps, and fieldwork data provided by the client. This process was slow, imperfect, and introduced its own biases. The model was only as good as the labels I could collect, and in a data-sparse environment like this, that ceiling is lower than you would like.
+					</p>
+
+					<h3>5. Terrain and Shadow Effects</h3>
+					<p>
+						Nepal is not flat. The hilly and mountainous terrain across much of the country means that shadows from ridgelines and slopes obscure structures at certain times of day and year. Orthorectification — correcting for terrain distortion in satellite images — helps, but does not eliminate the problem entirely. Structures on slopes also appear differently depending on the angle of the satellite pass, which adds another layer of variability the model has to handle.
+					</p>
+
+					<h3>6. Informal and Dispersed Farm Distribution</h3>
+					<p>
+						Commercial poultry farming in Nepal is not concentrated in industrial zones the way it might be in other countries. Farms are often embedded in mixed agricultural and residential landscapes, sometimes without formal registration or consistent physical form. This spatial informality makes it harder to define clean boundaries around what counts as a target structure, and harder to generalize from one region to another.
+					</p>
+
+					<h3>What I Took Away</h3>
+					<p>
+						Working on this project made clear that satellite-based mapping in low-resource, geographically complex settings is as much a data problem as it is a modeling problem. The accuracy of the final pipeline depended less on which architecture I used and more on how carefully I curated the training data, filtered candidate structures, and accounted for imagery inconsistencies. It also reinforced something I think gets underappreciated: domain knowledge matters enormously in applied geospatial ML. Understanding what poultry farms actually look like on the ground — their typical footprint, their placement relative to roads and water, their roofing materials — was just as useful as any technical tool in the stack.
+					</p>
+					<p>
+						There is still a lot of room to improve pipelines like this — better labeled datasets, fusion of SAR imagery to cut through clouds, and more robust geometry priors could all help significantly. But as a first pass, it was a useful reminder of how messy real-world ML can be outside of benchmark datasets.
+					</p>
+
 				</article>
 			</section>
-
-			<!-- Footer -->
-
 			<!-- Copyright -->
 			<div id="copyright">
 				<ul>
@@ -69,9 +102,7 @@
 					<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
 				</ul>
 			</div>
-
 		</div>
-
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -80,7 +111,5 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-
 </body>
-
 </html>
