@@ -53,7 +53,7 @@
 
 			<section id="projects" class="posts">
 
-				<!-- AIforGood Final Round Project (FIRST) -->
+				<!-- ITU AI and Space Computing Challenge - Final Round (FIRST) -->
 				<article class="project">
 					<header class="major">
 						<div class="image fit" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -64,30 +64,31 @@
 								allowfullscreen>
 							</iframe>
 						</div>
-						<h2>Built-Up Area Segmentation — ITU AI for Good Final Round</h2>
-						<p class="project-description"><strong>Role:</strong> Team Lead — Heat Sccape, Space Computing Challenge (Track 3)</p>
-						<p class="project-description"><strong>Problem:</strong> Accurately segmenting human settlements from high-resolution multispectral satellite imagery at a global competition scale</p>
-						<p class="project-description"><strong>Outcome:</strong> Refined segmentation pipeline submitted to the ITU AI for Good global final round</p>
-						<p class="project-description">After advancing from the preliminary round, I led Heat Sccape through the final round of the ITU AI for Good Space Computing Challenge (Track 3) — a global competition focused on applying AI to satellite imagery for real-world humanitarian and environmental problems.</p>
-						<p class="project-description">Building on our preliminary submission, I directed a full refinement of our segmentation approach. This included retraining and optimizing our UNet++ model with an EfficientNet-B4 encoder on the Gaofen Image Dataset (GID), improving preprocessing pipelines, and tuning inference for higher accuracy on built-up area classification from multispectral imagery.</p>
-						<p class="project-description">I led the end-to-end final submission process: overseeing model optimization, building the inference pipeline, and packaging the complete solution in a Docker container meeting ITU's evaluation specifications. The presentation video above was prepared as part of our final round deliverable, covering our methodology, results, and real-world applications in urban planning and disaster response.</p>
+						<h2>Land Surface Temperature Retrieval from SDGSAT-1 — ITU AI and Space Computing Challenge, Final Round</h2>
+						<p class="project-description"><strong>Role:</strong> Team Lead — Heat Sccape, Track 3: Space Intelligence Empowers Resilient Cities</p>
+						<p class="project-description"><strong>Problem:</strong> Retrieving accurate land surface temperature from raw satellite thermal imagery, on-orbit, with CPU-only compute and no network access</p>
+						<p class="project-description"><strong>Outcome:</strong> Bronze Medal, 7th globally · 99.15/100 bias score</p>
+						<p class="project-description">After advancing from the preliminary round, I led Heat Sccape through the final round of the ITU AI and Space Computing Challenge 2026, organized by ITU and Zhejiang Lab.</p>
+						<p class="project-description">The final round changed the task. Instead of segmentation, we were given raw SDGSAT-1 thermal imagery and a set of GPS points and asked to return land surface temperature at each one, running on CPU with no internet at runtime. We built a hybrid physics-and-machine-learning pipeline: Planck's Law radiometric calibration converts raw digital numbers to brightness temperature, then a TCWV-aware three-channel split-window algorithm retrieves LST using per-point ERA5 water vapor and ASTER GED emissivity. An ExtraTrees model corrects the retrieval across the range where our training data was dense, with the physics model taking over at the extremes so the system degrades gracefully rather than failing.</p>
+						<p class="project-description">Two decisions drove the accuracy. Applying water vapor correction per point rather than per scene — total column water vapor varied tenfold across test scenes, from 4.55 kg/m² over Germany in winter to 47.70 over Shanghai in summer, enough to introduce 1–3 K of systematic error. And sourcing emissivity per point from the ASTER Global Emissivity Database, since urban surface emissivity variance alone can cost up to 1.5 K.</p>
+						<p class="project-description">The broader aim is mapping urban heat inequality: identifying which neighborhoods carry the most heat burden so cities can direct cooling resources accordingly. We placed Bronze, 7th globally among teams from 20+ nations. The presentation video above was prepared as part of our final round deliverable, covering our methodology, results, and applications in urban planning and public health.</p>
 					</header>
 					<ul class="actions special">
-						<li><a href="https://github.com/Jenish-Budhathoki/heat-sccape" class="button">View Project</a></li>
+						<li><a href="https://github.com/Jenish-Budhathoki/Heat-Sccape" class="button">View Project</a></li>
 					</ul>
 				</article>
 
-				<!-- AIforGood Preliminary Round Project -->
+				<!-- ITU AI and Space Computing Challenge - Preliminary Round -->
 				<article class="project">
 					<header class="major">
-						<div class="image fit"><img src="images/aiforgood.png" alt="AIforGood satellite segmentation project" /></div>
-						<h2>Built-Up Area Segmentation from Satellite Imagery</h2>
-						<p class="project-description"><strong>Role:</strong> Team Lead — ITU AI for Good, Space Computing Challenge (Track 3)</p>
-						<p class="project-description"><strong>Problem:</strong> Detecting human settlements from high-resolution satellite imagery at scale</p>
-						<p class="project-description"><strong>Outcome:</strong> Semantic segmentation model trained on the GID dataset, submitted to the global ITU challenge</p>
-						<p class="project-description">As team lead of <em>Heat Sccape</em>, I directed the end-to-end development of a satellite image segmentation pipeline for the ITU AI for Good Space Computing Challenge.</p>
+						<div class="image fit"><img src="images/aiforgood.png" alt="Satellite segmentation project" /></div>
+						<h2>Built-Up Area Segmentation — ITU AI and Space Computing Challenge, Preliminary Round</h2>
+						<p class="project-description"><strong>Role:</strong> Team Lead — Heat Sccape, Track 3: Space Intelligence Empowers Resilient Cities</p>
+						<p class="project-description"><strong>Problem:</strong> Detecting human settlements from high-resolution multispectral satellite imagery at scale</p>
+						<p class="project-description"><strong>Outcome:</strong> Semantic segmentation model trained on the GID dataset; advanced to the global final round</p>
+						<p class="project-description">As team lead of <em>Heat Sccape</em>, I directed the end-to-end development of a satellite image segmentation pipeline for the preliminary round of the ITU AI and Space Computing Challenge 2026.</p>
 						<p class="project-description">The project involved training a UNet++ architecture with an EfficientNet-B4 encoder on the Gaofen Image Dataset (GID) to classify built-up areas from multispectral satellite imagery — a task with direct applications in urban planning, disaster response, and infrastructure monitoring.</p>
-						<p class="project-description">I led model selection, architecture decisions, training strategy, and final submission, deepening my hands-on experience with geospatial deep learning, encoder-decoder networks, and applying computer vision to real-world remote sensing problems.</p>
+						<p class="project-description">I led model selection, architecture decisions, training strategy, and submission, deepening my hands-on experience with geospatial deep learning, encoder-decoder networks, and applying computer vision to real-world remote sensing problems. This work advanced us to the final round, where the task shifted to land surface temperature retrieval.</p>
 					</header>
 					<ul class="actions special">
 						<li><a href="https://drive.google.com/drive/folders/1oYYCMvsvCbgksLNS3AVYXa4xTZtT3Llv?usp=sharing" class="button">View Project</a></li>
@@ -104,13 +105,13 @@
 							outcomes</p>
 						<p class="project-description"><strong>Tools:</strong> Python, NetCDF, ERA5, NOAA CDR, geospatial
 							visualization, Monte Carlo methods</p>
-						<p class="project-description">I support an early-stage research project aimed at building a systems model
+						<p class="project-description">I supported an early-stage research project aimed at building a systems model
 							for planetary health - examining how climate, environmental change, policy, and socioeconomic factors
 							interact over time.</p>
-						<p class="project-description">My contributions focus on processing and analyzing 35+ years of climate and
+						<p class="project-description">My contributions focused on processing and analyzing 35+ years of climate and
 							exposure data for North Carolina, creating spatial visualizations, and supporting variable selection
 							through exploratory analysis and literature review.</p>
-						<p class="project-description">I am currently learning and applying Monte Carlo simulations and Bayesian
+						<p class="project-description">I applied Monte Carlo simulations and Bayesian
 							approaches to assess uncertainty and inform model structure, emphasizing structure before prediction.</p>
 					</header>
 					<ul class="actions special">
@@ -155,14 +156,16 @@
 
 		</div>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
 </body>
 
